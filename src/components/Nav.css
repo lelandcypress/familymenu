@@ -1,0 +1,9 @@
+.navbarcont {
+  border: 2px solid black;
+  width: 100%;
+}
+
+.branding {
+  padding-right: 15%;
+  padding-left: 10%;
+}

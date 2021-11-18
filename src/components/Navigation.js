@@ -9,29 +9,29 @@ import Button from "react-bootstrap/Button";
 
 function Navigation() {
   return (
-    <>
-      <Navbar>
-        <Container>
-          <Navbar.Brand className="branding">Meal Planner</Navbar.Brand>
-        </Container>
-        <Form>
-          <Form.Group controlId="formBasicEmail">
+    <Container className="navbarcont">
+      <Navbar collapseOnSelect expand="lg">
+        <Navbar.Brand className="branding">Meal Planner</Navbar.Brand>
+
+        <Form className="searchbar">
+          <Form.Group controlId="searchbar">
             <Form.Control type="search" placeholder="Search Recipes" />
           </Form.Group>
-          <Button variant="primary" type="submit">
-            Search
-          </Button>
         </Form>
+        <Button variant="primary" type="submit">
+          Search
+        </Button>
+
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse className="justify-content-end">
           <Nav>
-            <Nav.Link as={Link} to={"/about"}>
+            <Nav.Link as={Link} to={"/recipes"}>
               Saved Recipes
             </Nav.Link>
-            <Nav.Link as={Link} to={"/projects"}>
+            <Nav.Link as={Link} to={"/shopping"}>
               Shopping List
             </Nav.Link>
-            <Nav.Link as={Link} to={"/resume"}>
+            <Nav.Link as={Link} to={"/menu"}>
               Weekly Menu
             </Nav.Link>
             <Nav.Link as={Link} to={"/contact"}>
@@ -40,7 +40,7 @@ function Navigation() {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-    </>
+    </Container>
   );
 }
 
